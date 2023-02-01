@@ -57,28 +57,52 @@ aem-site-template-standard-aem-site-template-standard-x.x.x
 
 ## Compile Theme
 
-Go to theme
+1. Open terminal in `theme` folder
 
-run `npm install`
+2. Run `npm install`
 
-run `npm run build`
+3. Run `npm run build`
 
-## Make Local Theme Externally Accessible
+## Make Local Theme Accessible for Development
 
-Go to `theme/dist`
+1. Open terminal in `theme/dist` folder
 
-run `http-server`
+2. Run `http-server -p 8888` to start a server on port 8888
 
-## Deploy Site Structure, Content and Template Policies
+## Deploy Site Structure, Content and Template Policies for Development
 
-Go to site and run `mvn clean install`
+1. Open terminal in `site` folder
 
-Install `target/xxx.zip` via Package Manager
+2. Run `mvn clean install`
+
+3. Install `target/xxx.zip` via Package Manager
 
 ## Configure Site to Use Local Theme
 
-Use crx/de to go to /conf/aem-site-template-standard/sling:configs/com.adobe.cq.wcm.core.components.config.HtmlPageItemsConfig/jcr:content
+1. Open browser and navigate to `http://localhost:4502/crx/de`
 
-make backup of prefixPath
+2. In `CRXDE Lite`, navigate to `/conf/aem-site-template-standard/sling:configs/com.adobe.cq.wcm.core.components.config.HtmlPageItemsConfig/jcr:content`
 
-change prefixPath to http://localhost:8080
+3. Make backup of `prefixPath` property
+
+4. Change `prefixPath` property to `http://localhost:8888` where local theme is hosted
+
+## Modify Site Structure, Content and Template Policies
+
+1. 
+
+## Export Modified Site Structure, Content and Template Policies
+
+1. 
+
+## Add Modified Site Structure, Content and Template Policies into Template
+
+1. 
+
+## Template Configurations
+
+1. 
+
+## Testing
+
+1. 
